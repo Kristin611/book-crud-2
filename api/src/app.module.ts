@@ -17,7 +17,7 @@ import { ConfigModule } from '@nestjs/config';
       database: 'book-crud-2',
       entities: [Book],
       synchronize: true,
-      logging: true, //to see logs from database in console
+      logging: false, //to see logs from database in console
     }),
     TypeOrmModule.forFeature([Book]),
   ],
