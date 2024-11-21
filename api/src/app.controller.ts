@@ -30,13 +30,14 @@ export class AppController {
 
   @Put('/book/:id')
   async updateBook(@Body() book: BookDto, @Param('id') id:number) {
-    console.log('book', book);
-    console.log('id', id)
+    console.log('PUT book route', book);
+    // console.log('id', id)
   return await this.appService.updateBook(id, book);
   }
   
   @Delete('book/:id')
   async deleteBook(@Param('id') id:number) {
+    // console.log('BOOK ID', id);
   return await this.appService.deleteBook(id);  
   }
   
