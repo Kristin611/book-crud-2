@@ -24,10 +24,14 @@ function App() {
     })
   }, [])
 
+  // const addBook = () => {
+  //   console.log('Hi')
+  // };
+
   return (
     <div>
       <h1>My Library</h1>
-      <Books books={books} />
+      <Books books={books} setBooks={setBooks}/>
     </div>
   )
 }
