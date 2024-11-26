@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios';
 import Books from './components/Books';
+import BookForm from './components/BookForm'
 
 export type Book = {
   id: number;
@@ -31,6 +32,7 @@ function App() {
   return (
     <div>
       <h1>My Library</h1>
+      <BookForm setBooks={setBooks} />
       <Books books={books} setBooks={setBooks}/>
     </div>
   )

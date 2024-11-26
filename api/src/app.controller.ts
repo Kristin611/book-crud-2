@@ -24,7 +24,8 @@ export class AppController {
 
   @Post('book')
   createBook(@Body() book: BookDto) {
-    // console.log('book', book)
+    // console.log('POST book', book)
+    // throw new Error('fake error')
     return this.appService.createBook(book)
   }
 
